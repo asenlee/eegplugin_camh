@@ -1,0 +1,12 @@
+function vers = eegplugin_camh( fig, try_strings, catch_strings )
+
+if nargin < 3
+    error('eegplugin_camh requires 3 arguments');
+end
+
+openfile = findobj(fig, 'tag', 'import data');
+
+uimenu( openfile, 'label', 'Open File', ...
+    'callback', [try_strings.no_check 'LASTCOM = pop_camh(EEG);' catch_strings.add_to_hist]);
+
+end
