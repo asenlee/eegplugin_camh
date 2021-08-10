@@ -7,9 +7,12 @@ function vers = eegplugin_camh( fig, try_strings, catch_strings )
   end
 
   toolsmenu = findobj(fig, 'tag', 'tools');
-  submenu = uimenu( toolsmenu, 'label', 'CAMH');
+  submenu = uimenu( toolsmenu, 'label', 'CAMH', 'separator', 'on');
 
   cmd = [try_strings.no_check '[EEG LASTCOM] = pop_camh_openfile(EEG);' catch_strings.new_and_hist];
 
-  uimenu( submenu, 'label', 'OPEN FILE', ...
-      'callback', cmd);
+  uimenu( submenu, 'label', 'OPEN FILE', 'callback', cmd);
+  uimenu( submenu, 'label', 'function 2', 'callback', ...);
+  uimenu( submenu, 'label', 'functino 3', 'callback', ...);
+  uimenu( submenu, 'label', 'function 4', 'callback', ...);
+  uimenu( submenu, 'label', 'functino 5', 'callback', ...);
