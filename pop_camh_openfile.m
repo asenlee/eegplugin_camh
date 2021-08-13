@@ -2,13 +2,14 @@ function [EEG com] = pop_camh_openfile(EEG, varargin)
 
 com = '';
 
+%check that data is present
 if isempty(EEG.data)
   error('Data is empty');
 end
 
 
 % pop up window
-
+% -------------
 if nargin < 2
   geometry = { 1 [1 1] }
 
