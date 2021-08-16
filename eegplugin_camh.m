@@ -22,3 +22,5 @@ function vers = eegplugin_camh( fig, try_strings, catch_strings )
   uimenu( submenu, 'label', 'functino 3', 'callback', ...);
   uimenu( submenu, 'label', 'function 4', 'callback', ...);
   uimenu( submenu, 'label', 'functino 5', 'callback', ...);
+
+end
