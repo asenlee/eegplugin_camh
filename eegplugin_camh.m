@@ -18,9 +18,9 @@ function vers = eegplugin_camh( fig, try_strings, catch_strings )
   % create menus
   % -------------------------
   uimenu( submenu, 'label', 'OPEN FILE', 'callback', comopen);
-  uimenu( submenu, 'label', 'function 2', 'callback', ...);
-  uimenu( submenu, 'label', 'functino 3', 'callback', ...);
-  uimenu( submenu, 'label', 'function 4', 'callback', ...);
-  uimenu( submenu, 'label', 'functino 5', 'callback', ...);
+%  uimenu( submenu, 'label', 'function 2', 'callback', ...);
+%  uimenu( submenu, 'label', 'functino 3', 'callback', ...);
+%  uimenu( submenu, 'label', 'function 4', 'callback', ...);
+%  uimenu( submenu, 'label', 'functino 5', 'callback', ...);
 
 end
