@@ -11,7 +11,7 @@ end
 % pop up window
 % -------------
 if nargin < 2
-  geometry = { 1 [ 1 1 ] };
+  geometry = { 1 [ 1 1 ] 1};
 
   uilist = {{'style', 'text', 'string', 'Enter Two Numbers for Subtraction:'}...
             {'style', 'edit', 'string', ''}...
