@@ -14,13 +14,17 @@ function vers = eegplugin_camh( fig, try_strings, catch_strings )
   % menu callbacks
   % --------------
   comopen = [try_strings.no_check '[EEG LASTCOM] = pop_camh_openfile(EEG);' catch_strings.new_and_hist];
+  comsum = [try_strings.no_check '[EEG LASTCOM] = pop_camh_summation(EEG);' catch_strings.new_and_hist];
+  comsub = [try_strings.no_check '[EEG LASTCOM] = pop_camh_subtraction(EEG);' catch_strings.new_and_hist];
+  commult = [try_strings.no_check '[EEG LASTCOM] = pop_camh_multiplication(EEG);' catch_strings.new_and_hist];
+  comdiv = [try_strings.no_check '[EEG LASTCOM] = pop_camh_division(EEG);' catch_strings.new_and_hist];
 
   % create menus
   % -------------------------
   uimenu( submenu, 'label', 'OPEN FILE', 'callback', comopen);
-%  uimenu( submenu, 'label', 'function 2', 'callback', ...);
-%  uimenu( submenu, 'label', 'functino 3', 'callback', ...);
-%  uimenu( submenu, 'label', 'function 4', 'callback', ...);
-%  uimenu( submenu, 'label', 'functino 5', 'callback', ...);
+  uimenu( submenu, 'label', 'Summation', 'callback', comsum);
+  uimenu( submenu, 'label', 'Subtraction', 'callback', comsub);
+  uimenu( submenu, 'label', 'Muliplication', 'callback', commult);
+  uimenu( submenu, 'label', 'Division', 'callback', comdiv);
 
 end
